@@ -18,5 +18,10 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        $this->call([
+            GameGenre::class,
+            GameSeeder::class,
+            UserSeeder::class
+        ]);
     }
 }
