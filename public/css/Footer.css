@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+}
+
+.Footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    background-color: hsl(0, 10%, 2%);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top:1em;
+    padding-bottom: 1em;
+}
+.Footer-Content{
+    width: 80%;
+}
+
+.Logo-Brand{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.Trending{
+    display: flex;
+    flex-direction: column;
+}
+
+.Contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-links{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2,250px);
+    grid-template-rows: repeat(4,1fr);
+    gap: 1em;
+    
+}
+
+.game-links > p{
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.footer-logo{
+    width: 40px;
+    height: 40px;
+}
+
+.gameon-brand{
+    text-decoration: none;
+    color: white;
+}
+
+.footer-logo img{
+    width: 100%;
+}
+.contact-icons{
+    display: flex;
+}
+
+.contact-icons .logo{
+    width: 25px;
+}
+
+.contact-icons img{
+    width: 100%;
+    margin: 0.2em;
+}
+
+.contact{
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.link{
+    text-decoration: none;
+    color: white;
+}

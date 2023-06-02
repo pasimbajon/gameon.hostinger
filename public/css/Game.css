@@ -1,0 +1,45 @@
+.Game-showcase{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+.Game-Content{
+    display: flex;
+}
+.Game-title{
+    color: white;
+    font-size: 3rem;
+    font-weight: bolder;
+    padding: 1em;
+}
+.Game-Add{
+    padding: 1em;
+}
+.Game-button{
+    background-color: hsl(192, 80%, 50%);
+    border: none;
+    margin: 0.5em;
+    padding: 1em;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.Game-Content img{
+    width: 100%;
+}
+.slideshow-gallery{
+    width: 60%;
+    padding: 1em;
+    position: relative;
+}
+.descriptions{
+    width: 40%;
+    padding: 1em;
+    color: white;
+}
+.game_desc{
+    padding: 0.5em;
+}
+

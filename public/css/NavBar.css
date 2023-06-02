@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: hsla(0, 0%, 0%);
+    color: white;
+    width: 100%;
+}
+
+.nav-brand{
+    font-size: 2rem;
+    font-weight: bold;
+    margin: .5rem;
+    display: flex;
+    text-decoration: none;
+}
+
+.navbar-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li{
+    list-style: none;
+}
+
+.navbar-links li .links{
+    text-decoration: none;
+    border: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+    background-color: hsla(0, 0%, 0%);
+}
+
+.navbar-links .links:hover{
+    background-color: hsl(0, 0%, 18%);
+}
+
+.toggle-button{
+    position:absolute;
+    border: none;
+    top: 1.5rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background-color: hsla(0, 0%, 0%);
+}
+
+.toggle-button .line{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+.gameon-logo{
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    color: white;
+}
+.gameon-brand{
+    text-decoration: none;
+    color: white;
+}
+
+.gameon-logo img{
+    width: 100%;
+}
+
+.Search-Bar{
+    background-color: hsl(0, 0%, 10%);
+    color: white;
+    width: 100%;
+    height: 3rem;
+    padding: 0 15px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 8px white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1em;
+}
+
+.Search-Bar input{
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    width: 100%;
+    font-size: 1.25rem;
+    margin-left: 5px;
+    color: white;
+}
+
+.Search-Bar input:focus{
+    outline: none;
+}
+.links{
+    position: relative;
+}
+.cartnumber{
+    position: absolute;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    text-align: center;
+}
+@media (max-width: 900px){
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+    .navbar-links li button{
+        width: 100%;
+        
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left:0;
+    }
+    .navbar-links ul{
+        width: 100%;
+        flex-direction: column;
+    }
+}

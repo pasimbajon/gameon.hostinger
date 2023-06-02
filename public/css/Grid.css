@@ -1,0 +1,48 @@
+.Content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tag{
+    color: white;
+}
+
+.Grid-Selection{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.grid-item{
+    position: relative;
+    display: flex;
+    width: 100%;
+    color: white;
+    background-color: black;
+    border: 2px solid hsl(0, 0%, 5%);
+    cursor: pointer;
+}
+.grid-images{
+    text-decoration: none;
+}
+.grid-images img{
+    width: 100%;
+}
+
+.item-desc{
+    width: 100%;
+    min-height: 100px;
+    padding: 0.2em 1em 0;
+    background-color: hsl(0, 0%, 10%);
+}
+.item-desc h2{
+    text-decoration: none;
+    color: white;
+}
