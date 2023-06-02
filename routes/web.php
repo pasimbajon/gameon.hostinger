@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\GameController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +22,9 @@ Route::get('/', function () {
 Route::get('/discover', function () {
     return view('pages.discover'); 
 });
+
+Route::resource('/admin/games',GameController::class);
+
 Route::get('/discover/{name}', function (string  $name) {
     $title = "";
     $description = "";
