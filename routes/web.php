@@ -179,12 +179,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::prefix('admin')->group(function (){
-    Route::get('/login',[AdminController::class,'index'])->name('adminLogin');
-    Route::post('/login/owner',[AdminController::class,'Login'])->name('admin.login');
-    Route::get('/dashboard',[AdminController::class,'Dashboard'])->name('admin.dashboard')->middleware('admin');
-    Route::get('/logout',[AdminController::class,'adminLogout'])->name('admin.logout')->middleware('admin');
-});
-
 require __DIR__.'/auth.php';
+
 

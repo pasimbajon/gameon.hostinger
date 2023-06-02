@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="{{url('/css/NavBar.css')}}">
     <link rel="stylesheet" type="text/css" href="{{url('/css/styles.css')}}">
     <link rel="stylesheet" type="text/css" href="{{url('/css/Carousel.css')}}">
+    <link rel="icon" type="image/x-icon" href="{{url('/images/LOGO/arcade-machine.png')}}">
+
     @yield("custom-css")
     <title>Game-on</title>
 </head>
