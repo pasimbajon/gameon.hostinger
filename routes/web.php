@@ -20,6 +20,9 @@ Route::get('/', function () {
 Route::get('/discover', function () {
     return view('pages.discover'); 
 });
+
+Route::resource('/admin/games',GameController::class);
+
 Route::get('/discover/{name}', function (string  $name) {
     $title = "";
     $description = "";
