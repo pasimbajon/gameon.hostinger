@@ -6,7 +6,7 @@
 @section("content")
 
     <div class='Game-showcase'>
-        <div class='Game-title'>{{ $games->game_title}}</div>
+        <div class='Game-title'>{{ $title}}</div>
         <div class='Game-Content'>
             <div class='slideshow-gallery'>
                     <div>
@@ -16,18 +16,17 @@
                             <img id="gallery-main-image" alt='gameimage' />
                         </div>
                         <div class='Gallery'>
-                            {{-- @foreach ($gallery as $img)
+                            @foreach ($gallery as $img)
                             <div class='gallery-images'>
                                 <img src="{{url($path . $img)}}" alt='gameimages' />
                             </div>
-                             @endforeach --}}
+                             @endforeach
                         </div>
                     </div>
             </div>
             <div class='descriptions'>
-                <div class='game_cover'><img src="{{ $games->img_cover}}" alt='img' /></div>
-                <div class='game_desc'>{{$games->game_desc}}</div>
-                <div class='price'><p>{{$games->price}}</p></div>
+                <div class='game_cover'><img src="{{url($image)}}" alt='img' /></div>
+                <div class='game_desc'>{{$description}}</div>
                 <div class='Game-Add'>
                     <button class='Game-button'>Add to your wishlist</button>
                     <button class='Game-button'>Add to Cart</button>
@@ -36,7 +35,7 @@
         </div>
     </div>
 
-{{-- <script>
+<script>
     const images =  @json($gallery);
     let currentIndex = 0;
 
@@ -56,7 +55,7 @@
             document.getElementById("gallery-main-image").src = "{{url('/')}}/" +"{{$path}}" + images[currentIndex];
         }
     }
-</script> --}}
+</script>
 
 @endsection
 
