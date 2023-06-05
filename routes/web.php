@@ -174,6 +174,10 @@ Route::get('/about', function () {
     return view('pages.about');
 });
 
+Route::get('/admin/dashboard', function () {
+    return view('pages.admindashboard');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
