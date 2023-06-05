@@ -103,7 +103,19 @@
         </div>
       </div>
     </div>
-<div class='Content'>
+  <div class='container'>
+    <div class="row">
+      @foreach($games as $item)
+      <div class="col-4">
+        <div class="card">
+          <a href="{{ url('/store/' . $item->id) }}"><img src="{{$item->img_cover}}" class="card-img-top" alt="..."></a>
+          <div class="card-body">
+            <p class="card-text">{{$item->game_title}}</p>
+          </div>
+        </div>
+      </div>
+      @endforeach
+    </div>
         <div class='Grid-Selection'>
             <div class='grid-item'>
             <a class='grid-images' to="/discover/destiny_2">

@@ -13,18 +13,20 @@
                 </div>
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <ul role="list" class="divide-y divide-gray-100">
+                        @foreach ($games as $item)
                         <li class="flex justify-between gap-x-6 py-5">
                           <div class="flex gap-x-4">
-                            <img class="flex-none bg-gray-50" width="200px" src="{{url('images/GAMES/DOTA 2/DOTA2_Cover.jpg')}}" alt="Image">
+                            <img class="flex-none bg-gray-50" width="100px" src="{{$item->img_cover}}" alt="Image">
                             <div class="min-w-0 flex-auto">
-                              <p class="text-sm font-semibold leading-5 text-white">Game Title</p>
-                              <p class="mt-1 truncate text-xs leading-6 text-white">Description</p>
+                                <p class="text-sm font-semibold leading-5 text-white">{{$item->game_title}}</p>
+                                <p class="mt-1 truncate text-xs leading-6 text-white">{{$item->game_desc}}</p>
                             </div>
                           </div>
                           <div class="hidden sm:flex sm:flex-col sm:items-end">
                             <p class="text-sm leading-6 text-white">Date added</p>
                           </div>
                         </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
