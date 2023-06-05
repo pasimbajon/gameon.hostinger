@@ -47,7 +47,7 @@
           <div class="image-item">
             <a href="/discover/pubg_battlegrounds">
               <img
-                src="{{url('images/GAMES/PUBG/PUBG_Cover.png')}}""
+                src="{{url('images/GAMES/PUBG/PUBG_Cover.png')}}"
                 alt="img"
               >
             </a>
