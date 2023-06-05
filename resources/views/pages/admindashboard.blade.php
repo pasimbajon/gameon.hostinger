@@ -61,7 +61,7 @@
               <tbody>
                 <tr>
                   <td>
-                    <img src="{{url("images/ADMIN/users-icon.webp")}}" />
+                    <img src="img/users-icon.webp" />
                     <p>User</p>
                   </td>
                   <td>01-01-2023</td>

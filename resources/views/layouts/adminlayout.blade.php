@@ -91,7 +91,7 @@
           <span class="num">8</span>
         </a> -->
         <a href="#" class="profile">
-          <img src="{{url("images/ADMIN/users-icon.webp")}}" />
+          <img src="{{url("images/ADMIN/users-icon.webp")}}"/>
         </a>
       </nav>
       <!-- NAVBAR -->
