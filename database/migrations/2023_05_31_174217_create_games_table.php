@@ -16,7 +16,9 @@ return new class extends Migration
             $table->string('game_title');
             $table->longText('game_desc');
             $table->string('price');
-            $table->string('img_cover')->default('');
+            $table->string('img_cover')->nullable();
+            $table->string('image_mime')->nullable();
+            $table->integer('img_size')->nullable();
             $table->unsignedBigInteger('genre_id');
             $table->foreign('genre_id')->references('id')->on('genres')->onDelete('cascade');
             $table->timestamps();

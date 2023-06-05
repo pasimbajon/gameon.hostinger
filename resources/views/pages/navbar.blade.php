@@ -28,7 +28,7 @@
           @if (Route::has('login'))
                 <div>
                   @auth
-                      <a class="nav-link" href="{{ url('/dashboard') }}" >Dashboard</a>
+                      <a class="nav-link" href="{{ url('/dashboard') }}" >Profile</a>
                   @else
                       <a class="nav-link" href="{{ route('login') }}">Login</a>
                   @endauth
