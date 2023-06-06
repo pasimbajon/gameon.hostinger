@@ -5,7 +5,7 @@
             <h1>User</h1>
             <ul class="breadcrumb">
               <li>
-                <a href="#">Products</a>
+                <a href="#">User</a>
               </li>
               <li><i class="bx bx-chevron-right"></i></li>
               <li>
@@ -53,13 +53,33 @@
             <table>
               <thead>
                 <tr>
+                  <th>Id</th>
                   <th>Name</th>
                   <th>Email</th>
                   <th>Password</th>
                   <th>Role</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tbody>
+                @foreach($users as $item)
+                                <tr>
+                                    <td>{{ $item->id }}</td>
+                                    <td>{{ $item->name }}</td>
+                                    <td>{{ $item->email }}</td>
+                                    <td>{{ $item->password}}</td>
+                                    <td>{{ $item->role}}</td>
+                                    <td>
+                                        <a href="{{ url('/admin/users/' . $item->id) }}" title="View User"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>View</button></a>
+                                        <a href="{{ url('/admin/users/' . $item->id . '/edit') }}" title="Edit User"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit</button></a>
+                                        <form method="POST" action="{{ url('/admin/users' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
+                                            {{ method_field('DELETE') }}
+                                            {{ csrf_field() }}
+                                            <button type="submit" class="btn btn-danger btn-sm" title="Delete User" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i>Delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            @endforeach
                 {{-- <tr>
                   <td>
                     <img src="img/users-icon.webp" />

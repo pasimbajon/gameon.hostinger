@@ -6,17 +6,17 @@ use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 use Illuminate\View\View;
-use App\Models\Game;
+use App\Models\User;
 
-class GameController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index(): View
     {
-        $games = Game::all();
-        return view ('pages.adminproducts')->with('games', $games);
+        $users = User::all();
+        return view ('pages.adminuser')->with('users', $users);
     }
 
     /**
@@ -24,7 +24,7 @@ class GameController extends Controller
      */
     public function create(): View
     {
-        return view('admin.games.create');
+        return view('admin.users.create');
     }
 
     /**
@@ -33,8 +33,8 @@ class GameController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $input = $request->all();
-        Game::create($input);
-        return redirect('/admin/games')->with('flash_message', 'Game Addedd!');
+        User::create($input);
+        return redirect('/admin/users')->with('flash_message', 'User Added!');
     }
 
     /**
@@ -42,8 +42,8 @@ class GameController extends Controller
      */
     public function show(string $id): View
     {
-        $games = Game::find($id);
-        return view('admin.games.show')->with('games', $games);
+        $users = User::find($id);
+        return view('admin.users.show')->with('users', $users);
     }
 
     /**
@@ -51,8 +51,8 @@ class GameController extends Controller
      */
     public function edit(string $id): View
     {
-        $games = Game::find($id);
-        return view('admin.games.edit')->with('games', $games);
+        $users = User::find($id);
+        return view('admin.users.edit')->with('users', $users);
     }
 
     /**
@@ -60,10 +60,10 @@ class GameController extends Controller
      */
     public function update(Request $request, string $id): RedirectResponse
     {
-        $games = Game::find($id);
+        $users = User::find($id);
         $input = $request->all();
-        $games->update($input);
-        return redirect('/admin/games')->with('flash_message', 'Game Updated!');  
+        $users->update($input);
+        return redirect('/admin/users')->with('flash_message', 'User Updated!');  
     }
 
     /**
@@ -71,7 +71,7 @@ class GameController extends Controller
      */
     public function destroy(string $id): RedirectResponse
     {
-        Game::destroy($id);
-        return redirect('/admin/games')->with('flash_message', 'Game deleted!');
+        User::destroy($id);
+        return redirect('/admin/users')->with('flash_message', 'User deleted!');
     }
 }

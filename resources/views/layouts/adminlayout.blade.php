@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <!-- My CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="{{url('/css/admin-style.css')}}" />
 
     <title>Game-On</title>
@@ -36,7 +37,7 @@
           </a>
         </li>
         <li class="{{str_contains(URL::current(), "user") ? "active" : ""}}">
-          <a href="{{url("admin/user")}}">
+          <a href="{{url("admin/users")}}">
             <i class="bx bxs-doughnut-chart"></i>
             <span class="text">Users</span>
           </a>
@@ -62,10 +63,12 @@
           </a>
         </li> -->
         <li>
-          <a href="#" class="logout">
+          <form action="{{ route('logout') }}" method="POST">
+          <a href="{{route('logout')}}" class="logout">
             <i class="bx bxs-log-out-circle"></i>
             <span class="text">Logout</span>
           </a>
+          </form>
         </li>
       </ul>
     </section>
@@ -106,5 +109,6 @@
     <!-- CONTENT -->
 
     <script src="{{url("/js/admin-scripts.js")}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -9,6 +9,7 @@ use App\Http\Controllers\HomeViewController;
 use App\Http\Controllers\LibraryViewController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,16 +30,18 @@ Route::get('/discover', function () {
 });
 
 Route::resource('/admin/games',GameController::class);
+Route::resource('/admin/users',UserController::class);
 Route::resource('/', HomeViewController::class)->only(['index','show']);
 Route::resource('/store', HomeViewController::class)->only(['index','show']);
 Route::resource('/discover',ViewController::class)->only(['index','show']);
+
 Route::get("/admin/dashboard", function() {
     return view('pages.admindashboard');
 });
-Route::get("/admin/products", function() {
+Route::get("/admin/products",[GameController::class,'index'], function() {
     return view('pages.adminproducts');
 });
-Route::get("/admin/user", function() {
+Route::get("/admin/users",[UserController::class,'index'], function() {
     return view('pages.adminuser');
 });
 // Route::get('/discover/{name}', function (string  $name) {
