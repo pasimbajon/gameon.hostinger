@@ -38,7 +38,7 @@
         </li>
         <li class="{{str_contains(URL::current(), "user") ? "active" : ""}}">
           <a href="{{url("admin/users")}}">
-            <i class="bx bxs-doughnut-chart"></i>
+           <i class='bx bxs-user'></i>
             <span class="text">Users</span>
           </a>
         </li>

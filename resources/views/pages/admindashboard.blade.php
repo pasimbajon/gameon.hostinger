@@ -59,14 +59,14 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                {{-- <tr>
                   <td>
                     <img src="img/users-icon.webp" />
                     <p>User</p>
                   </td>
                   <td>01-01-2023</td>
                   <td><span class="status completed">Pending</span></td>
-                </tr>
+                </tr> --}}
                 <!-- <tr>
                   <td>
                     <img src="img/people.png" />
