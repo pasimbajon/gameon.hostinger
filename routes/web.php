@@ -7,6 +7,8 @@ use App\Http\Controllers\GameController;
 use App\Http\Controllers\ViewController;
 use App\Http\Controllers\HomeViewController;
 use App\Http\Controllers\LibraryViewController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -179,6 +181,13 @@ Route::resource('/discover',ViewController::class)->only(['index','show']);
 Route::get('/about', function () {
     return view('pages.about');
 });
+
+Route::get('products', [ProductController::class, 'productList'])->name('products.list');
+Route::get('cart', [CartController::class, 'cartList'])->name('cart.list');
+Route::post('cart', [CartController::class, 'addToCart'])->name('cart.store');
+Route::post('update-cart', [CartController::class, 'updateCart'])->name('cart.update');
+Route::post('remove', [CartController::class, 'removeCart'])->name('cart.remove');
+Route::post('clear', [CartController::class, 'clearAllCart'])->name('cart.clear');
 
 Route::get('/dashboard',[LibraryViewController::class,'index'], function () {
     return view('dashboard');
