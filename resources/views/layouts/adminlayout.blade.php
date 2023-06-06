@@ -22,24 +22,25 @@
         <span class="text">Game-On</span>
       </a>
       <ul class="side-menu top">
-        <li class="active">
-          <a href="#">
+        
+        <li class="{{str_contains(URL::current(), "dashboard") ? "active" : ""}}">
+          <a href="{{url("admin/dashboard")}}">
             <i class="bx bxs-dashboard"></i>
             <span class="text">Dashboard</span>
           </a>
         </li>
-        <!-- <li>
-          <a href="#">
+        <li class="{{str_contains(URL::current(), "products") ? "active" : ""}}">
+          <a href="{{url("admin/products")}}">
             <i class="bx bxs-shopping-bag-alt"></i>
-            <span class="text">My Store</span>
+            <span class="text">Products</span>
           </a>
-        </li> -->
-        <!-- <li>
-          <a href="#">
+        </li>
+        <li class="{{str_contains(URL::current(), "user") ? "active" : ""}}">
+          <a href="{{url("admin/user")}}">
             <i class="bx bxs-doughnut-chart"></i>
-            <span class="text">Analytics</span>
+            <span class="text">Users</span>
           </a>
-        </li> -->
+        </li>
         <!-- <li>
           <a href="#">
             <i class="bx bxs-message-dots"></i>

@@ -35,6 +35,12 @@ Route::resource('/discover',ViewController::class)->only(['index','show']);
 Route::get("/admin/dashboard", function() {
     return view('pages.admindashboard');
 });
+Route::get("/admin/products", function() {
+    return view('pages.adminproducts');
+});
+Route::get("/admin/user", function() {
+    return view('pages.adminuser');
+});
 // Route::get('/discover/{name}', function (string  $name) {
 //     $title = "";
 //     $description = "";
