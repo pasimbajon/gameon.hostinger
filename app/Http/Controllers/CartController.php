@@ -18,12 +18,10 @@ class CartController extends Controller
     {
         \Cart::add([
             'id' => $request->id,
-            'name' => $request->name,
+            'name' => $request->game_title,
             'price' => $request->price,
             'quantity' => $request->quantity,
-            'attributes' => array(
-                'image' => $request->image,
-            )
+            'image' => $request->img_cover,
         ]);
         session()->flash('success', 'Product is Added to Cart Successfully !');
 

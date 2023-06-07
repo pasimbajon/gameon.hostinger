@@ -15,7 +15,7 @@
                       @endif
                         <h3 class="text-3xl font-bold">Carts</h3>
                       <div class="flex-1">
-                        <table class="w-full text-sm lg:text-base" cellspacing="0">
+                        <table class="w-full text-sm lg:text-base px-6" cellspacing="0">
                           <thead>
                             <tr class="h-12 uppercase">
                               <th class="md:table-cell"></th>
@@ -33,7 +33,7 @@
                             <tr>
                               <td class="pb-4 md:table-cell">
                                 <a href="#">
-                                  <img src="{{ $item->attributes->image }}" class="w-20 rounded" alt="Thumbnail">
+                                  <img src="{{ $item->img_cover }}" class="w-20 rounded" alt="Thumbnail">
                                 </a>
                               </td>
                               <td>

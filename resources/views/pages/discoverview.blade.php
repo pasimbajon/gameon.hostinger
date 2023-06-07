@@ -30,7 +30,15 @@
                 <div class='price'><p>{{$games->price}}</p></div>
                 <div class='Game-Add'>
                     <button class='Game-button'>Add to your wishlist</button>
-                    <button class='Game-button'>Add to Cart</button>
+                    <form action="{{ route('cart.store') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <input type="hidden" value="{{ $games->id }}" name="id">
+                        <input type="hidden" value="{{ $games->game_title }}" name="game_title">
+                        <input type="hidden" value="{{ $games->price }}" name="price">
+                        <input type="hidden" value="{{ $games->img_cover }}"  name="img_cover">
+                        <input type="hidden" value="1" name="quantity">
+                        <button class='Game-button'>Add to Cart</button>
+                    </form>
                 </div>
             </div>
         </div>

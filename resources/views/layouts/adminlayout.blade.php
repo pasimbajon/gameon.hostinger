@@ -64,7 +64,7 @@
         </li> -->
         <li>
           <form action="{{ route('logout') }}" method="POST">
-          <a href="{{route('logout')}}" class="logout">
+          <a href="{{route('logout')}}" class="logout" onclick="">
             <i class="bx bxs-log-out-circle"></i>
             <span class="text">Logout</span>
           </a>

@@ -15,10 +15,14 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->double('price');
-            $table->text('description');
-            $table->string('image');
+            $table->string('game_title');
+            $table->longText('game_desc');
+            $table->string('price');
+            $table->string('img_cover')->nullable();
+            $table->string('image_mime')->nullable();
+            $table->integer('img_size')->nullable();
+            $table->unsignedBigInteger('genre_id');
+            $table->foreign('genre_id')->references('id')->on('genres')->onDelete('cascade');
             $table->timestamps();
         });
     }
