@@ -28,23 +28,31 @@ Route::get('/', function () {
 Route::get('/discover', function () {
     return view('pages.discover'); 
 });
-
-Route::resource('/admin/games',GameController::class);
-Route::resource('/admin/users',UserController::class);
 Route::resource('/', HomeViewController::class)->only(['index','show']);
 Route::resource('/store', HomeViewController::class)->only(['index','show']);
 Route::resource('/discover',ViewController::class)->only(['index','show']);
 
-Route::get("/admin/dashboard", function() {
-    return view('pages.admindashboard');
-});
-Route::get("/admin/products",[GameController::class,'index'], function() {
+Route::prefix('admin')->group(function (){
+    Route::get('/login',[AdminController::class,'index'])->name('adminLogin');
+    Route::post('/login/owner',[AdminController::class,'Login'])->name('admin.login');
+    Route::get('/dashboard',[AdminController::class,'Dashboard'])->name('admin.dashboard')->middleware('admin');
+    Route::get("/products",[AdminController::class,'products'])->name('admin.products')->middleware('admin');
+    Route::get("/users",[AdminController::class,'users'])->name('admin.user')->middleware('admin');
+    Route::get('/logout',[AdminController::class,'adminLogout'])->name('admin.logout')->middleware('admin');
+    Route::resource('/games',GameController::class)->middleware('admin');
+    Route::resource('/users',UserController::class)->middleware('admin');
+    });
+
+// Route::get("/admin/dashboard", function() {
+//     return view('pages.admindashboard');
+// });
+// Route::get("/admin/products",[GameController::class,'index'], function() {
     
-    return view('pages.adminproducts');
-});
-Route::get("/admin/users",[UserController::class,'index'], function() {
-    return view('pages.adminuser');
-});
+//     return view('pages.adminproducts');
+// });
+// Route::get("/admin/users",[UserController::class,'index'], function() {
+//     return view('pages.adminuser');
+// });
 // Route::get('/discover/{name}', function (string  $name) {
 //     $title = "";
 //     $description = "";

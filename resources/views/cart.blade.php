@@ -1,13 +1,13 @@
 <x-app-layout>
   <x-slot name="header">
-      <h2 class="font-semibold text-xl text-gray-800">
+      <h2 class="font-semibold text-xl text-white">
           {{ __('Cart') }}
       </h2>
   </x-slot>
           <main class="my-8">
             <div class="container px-6 mx-auto">
                 <div class="flex justify-center my-6">
-                    <div class="flex flex-col w-full p-8 text-gray-800 bg-white shadow-lg pin-r pin-y md:w-4/5 lg:w-4/5">
+                    <div class="flex flex-col w-full p-8 text-white bg-gray-800 shadow-lg pin-r pin-y md:w-4/5 lg:w-4/5 rounded">
                       @if ($message = Session::get('success'))
                           <div class="p-4 mb-3 bg-green-400 rounded">
                               <p class="text-green-800">{{ $message }}</p>
