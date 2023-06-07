@@ -9,7 +9,7 @@
         <label>Username</label></br>
         <input type="text" name="game_title" id="game_title" class="form-control"></br>
         <label>Email</label></br>
-        <textarea class="form-control" name="game_desc" id="game_desc" style="height: 100px"></textarea>
+        <input class="form-control" name="game_desc" id="game_desc">
         <label>Password</label></br>
         <input type="text" name="price" id="price" class="form-control"></br>
         <label>Role</label></br>

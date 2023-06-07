@@ -104,19 +104,19 @@
       </div>
     </div>
   <div class='container'>
-    <div class="row">
+    <div class="row gy-5 mt-4 mb-4">
       @foreach($games as $item)
-      <div class="col-4">
-        <div class="card">
-          <a href="{{ url('/store/' . $item->id) }}"><img src="{{$item->img_cover}}" class="card-img-top" alt="..."></a>
-          <div class="card-body">
-            <p class="card-text">{{$item->game_title}}</p>
+      <div class="col-sm-4">
+        <div class="card border-0">
+          <a href="{{ url('/store/' . $item->id) }}"><img src="{{$item->img_cover}}" class="card-img-top object-fit-cover mh-100" style="height:200px; alt="..."></a>
+          <div class="card-body bg-dark">
+            <p class="card-text text-light">{{$item->price}}</p>
           </div>
         </div>
       </div>
       @endforeach
     </div>
-        <div class='Grid-Selection'>
+        {{-- <div class='Grid-Selection'>
             <div class='grid-item'>
             <a class='grid-images' to="/discover/destiny_2">
               <img alt='img' src="{{url('/images/GAMES/DESTINY 2/DESTINY2_Cover.jpg')}}" />
@@ -172,7 +172,7 @@
                 <h2>Team Fortress 2</h2>
               </div></a>
             </div>
-        </div>
+        </div> --}}
     </div>
 </body>
 </html>

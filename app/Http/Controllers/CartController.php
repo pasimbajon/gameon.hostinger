@@ -21,7 +21,7 @@ class CartController extends Controller
             'name' => $request->game_title,
             'price' => $request->price,
             'quantity' => $request->quantity,
-            'img_cover' => $request->img_cover,
+            'images' => $request->img_cover,
         ]);
         session()->flash('success', 'Product is Added to Cart Successfully !');
 

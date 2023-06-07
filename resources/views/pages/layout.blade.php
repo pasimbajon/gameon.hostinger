@@ -24,20 +24,34 @@
     </div>
     <div class='Footer'>
         <div class='Footer-Content'>
-          <div class='Trending'>
+          <div class='row gy-4 mb-2'>
             <h3>Trending</h3>
-            <div class='game-links'>
+            <div class='col-6'>
               <a href="/discover/counter-strike_global_offensive" class='link'>Counter-Strike: Global Offensive</a>
+            </div>
+            <div class='col-6'>
               <a href="/discover/dota_2" class='link'>DOTA 2</a>
+            </div>
+            <div class='col-6'>
               <a href="/discover/apex_legends" class='link'>Apex Legends</a>
+            </div>
+            <div class='col-6'>
               <a href="/discover/pubg_battlegrounds" class='link'>PUBG: BATTLEGROUNDS</a>
+            </div>
+            <div class='col-6'>
               <a href="/discover/grand_theft_auto_V" class='link'>Grand Theft Auto V</a>
+            </div>
+            <div class='col-6'>
               <a href="/discover/rust" class='link'>Rust</a>
+            </div>
+            <div class='col-6'>
               <a href="/discover/war_thunder" class='link'>War Thunder</a>
+            </div>
+            <div class='col-6'>
               <a href="/discover/team_fortress_2" class='link'>Team Fortress 2</a>
             </div>
           </div>
-          <div class='Contacts'>
+          <div class='row'>
             <div class='contact-icons'>
               <img class='logo' src="{{url('/images/ICONS/facebook.png')}}" alt='logo'>
               <img class='logo' src="{{url('/images/ICONS/instagram.png')}}" alt='logo'>

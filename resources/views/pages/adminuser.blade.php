@@ -50,6 +50,9 @@
               <i class="bx bx-search"></i>
               <i class="bx bx-filter"></i>
             </div>
+            <a href="{{ url('/admin/users/create') }}" class="btn btn-success btn-sm" title="Add New Game">
+              <i class="fa fa-plus" aria-hidden="true"></i> Add New
+            </a>
             <table>
               <thead>
                 <tr>
