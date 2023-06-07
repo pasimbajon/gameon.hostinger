@@ -21,9 +21,9 @@
 
         <ul class="box-info">
           <li>
-            <i class="bx bxs-calendar-check"></i>
+            <i class='bx bxs-joystick' ></i>
             <span class="text">
-              <h3>0</h3>
+              <h3>{{ count($games)}}</h3>
               <p>Games</p>
             </span>
           </li>
@@ -60,7 +60,7 @@
                   <th scope="col">Name</th>
                   <th scope="col">Description</th>
                   <th scope="col">Price</th>
-                  <th scope="col">Genre</th>
+                  <th  scope="col">Genre</th>
                   <th scope="col">Action</th>
                 </tr>
               </thead>

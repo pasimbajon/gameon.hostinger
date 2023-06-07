@@ -21,10 +21,10 @@
 
         <ul class="box-info">
           <li>
-            <i class="bx bxs-calendar-check"></i>
+            <i class='bx bxs-user'></i>
             <span class="text">
-              <h3>0</h3>
-              <p>New Order</p>
+              <h3>{{ count($users)}}</h3>
+              <p>Users Count</p>
             </span>
           </li>
           <!-- <li>
@@ -34,13 +34,13 @@
               <p>Visitors</p>
             </span>
           </li> -->
-          <li>
+          {{-- <li>
             <i class="bx bxs-purchase-tag-alt"></i>
             <span class="text">
               <h3>0</h3>
               <p>Total Sales</p>
             </span>
-          </li>
+          </li> --}}
         </ul>
 
         <div class="table-data">

@@ -39,6 +39,7 @@ Route::get("/admin/dashboard", function() {
     return view('pages.admindashboard');
 });
 Route::get("/admin/products",[GameController::class,'index'], function() {
+    
     return view('pages.adminproducts');
 });
 Route::get("/admin/users",[UserController::class,'index'], function() {
