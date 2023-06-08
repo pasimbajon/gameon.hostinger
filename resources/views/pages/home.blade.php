@@ -28,78 +28,16 @@
       <div class="Carousel">
         <h2> Featured </h2>
         <div class="home-carousel">
+          @foreach($games as $item)
           <div class="image-item">
-            <a href="/discover/dota_2">
+            <a href="/discover/{{$item->id}}">
               <img
-                src="{{url('images/GAMES/DOTA 2/DOTA2_Cover.jpg')}}"
+                src="{{url($item->img_cover)}}"
                 alt="img"
               >
             </a>
           </div>
-          <div class="image-item">
-            <a href="/discover/apex_legends">
-              <img
-                src="{{url('images/GAMES/APEX LEGENDS/APEX_COVER.jpg')}}"
-                alt="img"
-              >
-            </a>
-          </div>
-          <div class="image-item">
-            <a href="/discover/pubg_battlegrounds">
-              <img
-                src="{{url('images/GAMES/PUBG/PUBG_Cover.png')}}"
-                alt="img"
-              >
-            </a>
-          </div>
-          <div class="image-item">
-            <a href="/discover/grand_theft_auto_V">
-              <img
-                src="{{url('images/GAMES/GRAND THEFT AUTO V/GTAV_Cover.jpg')}}"
-                alt="img"
-              >
-            </a>
-          </div>
-          <div class="image-item">
-            <a href="/discover/age_of_wonders_4">
-              <img
-                src="{{url('images/GAMES/AGE OF WONDERS 4/AOW4_Cover.jpg')}}"
-                alt="img"
-              >
-            </a>
-          </div>
-          <div class="image-item">
-            <a href="/discover/monster_hunter_world">
-              <img
-                src="{{url('images/GAMES/MOSNTER HUNTER WORLD/MHW_Cover.jpg')}}"
-                alt="img"
-              >
-            </a>
-          </div>
-          <div class="image-item">
-            <a href="/discover/marvels_guardians_of_the_galaxy">
-              <img
-                src="{{url('images/GAMES/MARVELS GUARDIANS OF THE GALAXY/GOTG_Cover.jpg')}}"
-                alt="img"
-              >
-            </a>
-          </div>
-          <div class="image-item">
-            <a href="/discover/hogwarts_legacy">
-              <img
-                src="{{url('images/GAMES/HOGWARTS LEGACY/HL_Cover.jpg')}}"
-                alt="img"
-              >
-            </a>
-          </div>
-          <div class="image-item">
-            <a href="/discover/asssassins_creed_origins">
-              <img
-                src="{{url('images/GAMES/ASSASSINS CREED ORIGINS/ACO_Cover.jpg')}}"
-                alt="img"
-              >
-            </a>
-          </div>
+          @endforeach
         </div>
       </div>
     </div>

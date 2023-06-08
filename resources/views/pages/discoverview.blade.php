@@ -25,7 +25,7 @@
                     </div>
             </div>
             <div class='descriptions'>
-                <div class='game_cover'><img src="{{ $games->img_cover}}" alt='img' /></div>
+                <div class='game_cover'><img src="{{ url($games->img_cover) }}" alt='img' /></div>
                 <div class='game_desc'>{{$games->game_desc}}</div>
                 <div class='price'><p>{{$games->price}}</p></div>
                 <div class='Game-Add'>
