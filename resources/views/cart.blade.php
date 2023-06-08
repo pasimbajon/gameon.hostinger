@@ -84,9 +84,9 @@
                           </form>
                         </div>
                         <div>
-                          <form action="{{ route('cart.clear') }}" method="POST">
+                         <form action="{{ route('order.complete') }}" method="POST">
                             @csrf
-                            <button class="px-6 py-2 text-sm  rounded shadow text-green-100 bg-green-500">Purchase</button>
+                            <button class="px-6 py-2 text-sm  rounded shadow text-red-100 bg-red-500">Complete Order</button>
                           </form>
                         </div>
                       </div>
