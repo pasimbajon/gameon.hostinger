@@ -7,6 +7,9 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 use Illuminate\View\View;
 use App\Models\Game;
+use Illuminate\Support\Facades\Storage;
+use App\Http\Requests\Game\StoreRequest;
+use App\Http\Requests\Game\UpdateRequest;
 
 class GameController extends Controller
 {
@@ -32,13 +35,15 @@ class GameController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        $request->validate([
-            'img_cover' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
-        $input = $request->all();
-        Game::create($input);
-        
-        return redirect('/admin/games')->with('flash_message', 'Game Addedd!');
+        $validated = $request->all();
+        if($request->hasFile('img_cover')){
+            $filePath = Storage::disk('public')->put('images/COVERS',request()->file('img_cover'));
+            $validated['img_cover'] = $filePath;
+        }
+        $create = Game::create($validated);
+        if($create){
+            return redirect('/admin/games')->with('flash_message', 'Game Addedd!');
+        }
     }
 
     /**
@@ -65,8 +70,13 @@ class GameController extends Controller
     public function update(Request $request, string $id): RedirectResponse
     {
         $games = Game::find($id);
-        $input = $request->all();
-        $games->update($input);
+        $validated = $request->all();
+        if($request->hasFile('img_cover')){
+            Storage::disk('public')->delete($games->img_cover);
+            $filePath = Storage::disk('public')->put('/images/COVERS', request()->file('img_cover'), 'public');
+            $validated['img_cover'] = $filePath;
+        }
+        $games->update($validated);
         return redirect('/admin/games')->with('flash_message', 'Game Updated!');  
     }
 
@@ -75,6 +85,10 @@ class GameController extends Controller
      */
     public function destroy(string $id): RedirectResponse
     {
+        $game = Game::findOrFail($id);
+
+        Storage::disk('public')->delete($game->img_cover);
+        
         Game::destroy($id);
         return redirect('/admin/games')->with('flash_message', 'Game deleted!');
     }

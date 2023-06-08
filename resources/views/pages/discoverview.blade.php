@@ -15,13 +15,13 @@
                             <div class='rightArrow' onClick="goToNext()">&#10095;</div>
                             <img id="gallery-main-image" alt='gameimage' />
                         </div>
-                        <div class='Gallery'>
-                            {{-- @foreach ($gallery as $img)
+                        {{-- <div class='Gallery'>
+                            @foreach ($gallery as $img)
                             <div class='gallery-images'>
                                 <img src="{{url($path . $img)}}" alt='gameimages' />
                             </div>
-                             @endforeach --}}
-                        </div>
+                             @endforeach
+                        </div> --}}
                     </div>
             </div>
             <div class='descriptions'>

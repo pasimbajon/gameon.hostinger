@@ -12,9 +12,9 @@
         <textarea class="form-control" name="game_desc" id="game_desc" style="height: 100px"></textarea>
         <label>Price</label></br>
         <input type="text" name="price" id="price" class="form-control"></br>
-        <img src="images/{{ Session::get('image') }}">
+        <img id="img_cover_preview" class="w-25"></br>
         <label for="img_cover">Image Cover</label></br>
-        <input type="text" name="img_cover" id="img_cover" class="form-control"></br>
+        <input type="file" name="img_cover" id="img_cover" class="form-control"></br>
         <label>Genre</label></br>
         <select name="genre_id" id="genre_id" class="form-select">
             <option value=1>Action</option>
@@ -34,4 +34,12 @@
   
   </div>
 </div>
+<script>
+  document.getElementById('img_cover').onchange = function(evt) {
+    const [file] = this.files
+    if (file) {
+      document.getElementById('img_cover_preview').src = URL.createObjectURL(file)
+    }
+  }
+</script>
 @stop

@@ -14,6 +14,9 @@
         <textarea class="form-control" name="game_desc" id="game_desc" rows="4" cols="50" >
 <?php echo $games->game_desc?>
         </textarea>
+        <img id="img_cover_preview" class="w-25">
+        <label for="img_cover">Image Cover</label></br>
+        <input type="file" name="img_cover" id="img_cover" class="form-control"></br>
         <label>Price</label></br>
         <input type="text" name="price" id="price" value="{{$games->price}}" class="form-control"></br>
         <select name="genre_id" id="genre_id" class="form-select">
@@ -34,4 +37,12 @@
   
   </div>
 </div>
+<script>
+  document.getElementById('img_cover').onchange = function(evt) {
+    const [file] = this.files
+    if (file) {
+      document.getElementById('img_cover_preview').src = URL.createObjectURL(file)
+    }
+  }
+</script>
 @stop
