@@ -32,8 +32,12 @@ class GameController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
+        $request->validate([
+            'img_cover' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
         $input = $request->all();
         Game::create($input);
+        
         return redirect('/admin/games')->with('flash_message', 'Game Addedd!');
     }
 

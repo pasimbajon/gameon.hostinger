@@ -12,7 +12,7 @@
                     {{ __("Game Library") }}
                 </div>
                 <div class="p-6 text-white">
-                    <ul role="list" class="divide-y divide-gray-100">
+                    {{-- <ul role="list" class="divide-y divide-gray-100">
                         @foreach ($games as $item)
                         <li class="flex justify-between gap-x-6 py-5">
                           <div class="flex gap-x-4">
@@ -27,7 +27,7 @@
                           </div>
                         </li>
                         @endforeach
-                    </ul>
+                    </ul> --}}
                 </div>
             </div>
         </div>

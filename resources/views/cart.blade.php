@@ -33,7 +33,7 @@
                             <tr>
                               <td class="pb-4 md:table-cell">
                                 <a href="#">
-                                  <img src="{{ $item->img_cover }}" class="w-20 rounded" alt="Thumbnail">
+                                  <img src="{{ $item->attributes->image }}" class="w-20 rounded" alt="Thumbnail">
                                 </a>
                               </td>
                               <td>
@@ -58,7 +58,7 @@
                               </td>
                               <td class="text-right md:table-cell">
                                 <span class="text-sm font-medium lg:text-base">
-                                    ${{ $item->price }}
+                                    {{ $item->price }}
                                 </span>
                               </td>
                               <td class="text-right md:table-cell">
@@ -75,12 +75,18 @@
                           </tbody>
                         </table>
                         <div>
-                         Total: ${{ Cart::getTotal() }}
+                         Total: {{ Cart::getTotal() }}
                         </div>
                         <div>
                           <form action="{{ route('cart.clear') }}" method="POST">
                             @csrf
                             <button class="px-6 py-2 text-sm  rounded shadow text-red-100 bg-red-500">Clear Carts</button>
+                          </form>
+                        </div>
+                        <div>
+                          <form action="{{ route('cart.clear') }}" method="POST">
+                            @csrf
+                            <button class="px-6 py-2 text-sm  rounded shadow text-green-100 bg-green-500">Purchase</button>
                           </form>
                         </div>
                       </div>

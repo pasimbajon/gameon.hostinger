@@ -17,14 +17,14 @@ class GameSeeder extends Seeder
             [
                 'game_title' => 'Asssassins Creed Origins',
                 'game_desc' => 'ASSASSIN’S CREED® ORIGINS IS A NEW BEGINNING *The Discovery Tour by Assassin’s Creed®: Ancient Egypt is available now as a free update!* Ancient Egypt, a land of majesty and intrigue, is disappearing in a ruthless fight for power.',
-                'price' => '2,200.00',
+                'price' => '2200.00',
                 'img_cover' => '/images/GAMES/ASSASSINS CREED ORIGINS/ACO_Cover.jpg',
                 'genre_id' => 1
             ],
             [
                 'game_title' => 'Age of Wonders 4',
                 'game_desc' => 'Rule a fantasy realm of your own design! Explore new magical realms in Age of Wonders’ signature blend of 4X strategy and turn-based tactical combat. Control a faction that grows and changes as you expand your empire with each turn!',
-                'price' => '1,859.00',
+                'price' => '1859.00',
                 'img_cover' => '/images/GAMES/AGE OF WONDERS 4/AOW4_Cover.jpg',
                 'genre_id' => 11
             ],
@@ -66,7 +66,7 @@ class GameSeeder extends Seeder
             [
                 'game_title' => 'EA Sports Fifa 23',
                 'game_desc' => 'FIFA 23 brings The World’s Game to the pitch, with HyperMotion2 Technology, men’s and women’s FIFA World Cup™coming during the season, women’s club teams, cross-play features*, and more.',
-                'price' => '2,999.00',
+                'price' => '2999.00',
                 'img_cover' => '/images/GAMES/EA SPORTS FIFA 23/FIFA_Cover.jpg',
                 'genre_id' => 10
             ],
@@ -80,28 +80,28 @@ class GameSeeder extends Seeder
             [
                 'game_title' => 'Hogwarts Legacy',
                 'game_desc' => 'Hogwarts Legacy is an immersive, open-world action RPG. Now you can take control of the action and be at the center of your own adventure in the wizarding world.',
-                'price' => '2,500.00',
+                'price' => '2500.00',
                 'img_cover' => '/images/GAMES/HOGWARTS LEGACY/HL_Cover.jpg',
                 'genre_id' => 7
             ],
             [
                 'game_title' => 'Marvels Guardians Of The Galaxy',
                 'game_desc' => 'Fire up a wild ride across the cosmos with a fresh take on Marvel’s Guardians of the Galaxy. In this action-adventure game, you are Star-Lord leading the unpredictable Guardians from one explosion of chaos to the next. You got this. Probably.',
-                'price' => '2,990.00',
+                'price' => '2990.00',
                 'img_cover' => '/images/GAMES/MARVELS GUARDIANS OF THE GALAXY/GOTG_Cover.jpg',
                 'genre_id' => 1
             ],
             [
                 'game_title' => 'Monster Hunter Rise',
                 'game_desc' => 'Rise to the challenge and join the hunt! In Monster Hunter Rise, the latest installment in the award-winning and top-selling Monster Hunter series, you’ll become a hunter, explore brand new maps and use a variety of weapons to take down fearsome monsters as part of an all-new storyline.',
-                'price' => '1,979.00',
+                'price' => '1979.00',
                 'img_cover' => '/images/GAMES/MONSTER HUNTER RISE/MHR_Cover.jpg',
                 'genre_id' => 1
             ],
             [
                 'game_title' => 'Monster Hunter World',
                 'game_desc' => 'Welcome to a new world! In Monster Hunter: World, the latest installment in the series, you can enjoy the ultimate hunting experience, using everything at your disposal to hunt monsters in a new world teeming with surprises and excitement.',
-                'price' => '1,209.00',
+                'price' => '1209.00',
                 'img_cover' => '/images/GAMES/MOSNTER HUNTER WORLD/MHW_Cover.jpg',
                 'genre_id' => 1
             ],
@@ -122,7 +122,7 @@ class GameSeeder extends Seeder
             [
                 'game_title' => 'Rust',
                 'game_desc' => 'The only aim in Rust is to survive. Everything wants you to die - the island’s wildlife and other inhabitants, the environment, other survivors. Do whatever it takes to last another night.',
-                'price' => '1,049.95',
+                'price' => '1049.95',
                 'img_cover' => '/images/GAMES/RUST/RUST_Cover.jpg',
                 'genre_id' => 2
             ],
@@ -136,7 +136,7 @@ class GameSeeder extends Seeder
             [
                 'game_title' => 'Star Wars Jedi Survivor',
                 'game_desc' => 'The story of Cal Kestis continues in STAR WARS Jedi: Survivor™, a galaxy-spanning, third-person, action-adventure game.',
-                'price' => '2,999.00',
+                'price' => '2999.00',
                 'img_cover' => '/images/GAMES/STAR WARS JEDI SURVIVOR/SWJS_Cover.jpg',
                 'genre_id' => 1
             ],
