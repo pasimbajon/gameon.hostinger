@@ -9,7 +9,7 @@ class CartController extends Controller
     public function cartList()
     {
         $cartItems = \Cart::getContent();
-        // dd($cartItems);
+        //dd($cartItems);
         return view('cart', compact('cartItems'));
     }
 
@@ -21,7 +21,9 @@ class CartController extends Controller
             'name' => $request->game_title,
             'price' => $request->price,
             'quantity' => $request->quantity,
-            'images' => $request->img_cover,
+            'attributes' => array(
+                'image' => $request->img_cover,
+            )
         ]);
         session()->flash('success', 'Product is Added to Cart Successfully !');
 
