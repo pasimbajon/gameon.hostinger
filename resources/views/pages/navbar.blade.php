@@ -38,7 +38,7 @@
         <li class="nav-item">
           @if(Route::has('login'))
             @auth
-            <a class="nav-link">Wishlist</a>
+            <a class="nav-link"href="{{ route('wishlist.list') }}">Wishlist</a>
             @endauth
           @endif
         </li>

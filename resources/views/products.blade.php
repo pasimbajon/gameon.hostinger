@@ -23,7 +23,7 @@
                         <input type="hidden" value="{{ $product->game_title }}" name="game_title">
                         <input type="hidden" value="{{ $product->price }}" name="price">
                         <input type="hidden" value="{{ $product->img_cover }}"  name="img_cover">
-                        <input type="hidden" value="1" name="quantity">
+                        <input type="text" value="1" name="quantity">
                         <button class="px-4 py-1.5 text-white bg-blue-800 text-sm rounded-none">Add To Cart</button>
                     </form>
                 </div>

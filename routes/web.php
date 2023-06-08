@@ -8,6 +8,7 @@ use App\Http\Controllers\ViewController;
 use App\Http\Controllers\HomeViewController;
 use App\Http\Controllers\LibraryViewController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\WishlistController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\OrderController;
@@ -74,12 +75,18 @@ Route::middleware('auth')->group(function () {
     Route::post('update-cart', [CartController::class, 'updateCart'])->name('cart.update');
     Route::post('remove', [CartController::class, 'removeCart'])->name('cart.remove');
     Route::post('clear', [CartController::class, 'clearAllCart'])->name('cart.clear');
+    Route::get('wishlist', [WishlistController::class, 'wishlistList'])->name('wishlist.list');
+    Route::post('wishlist', [WishlistController::class, 'addToWishlist'])->name('wishlist.store');
+    Route::post('update-wishlist', [WishlistController::class, 'updateWishlist'])->name('wishlist.update');
+    Route::post('wishlistRemove', [WishlistController::class, 'removeWishlist'])->name('wishlist.remove');
+    Route::post('wishlistClear', [WishlistController::class, 'clearAllWishlist'])->name('wishlist.clear');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::post('complete-order', [OrderController::class, 'createOrder'])->name('order.complete');
 
 });
+
 
 require __DIR__.'/auth.php';
 

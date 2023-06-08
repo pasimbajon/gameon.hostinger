@@ -7,13 +7,16 @@
       <form action="{{ url('/admin/users') }}" method="post">
         {!! csrf_field() !!}
         <label>Username</label></br>
-        <input type="text" name="game_title" id="game_title" class="form-control"></br>
+        <input type="text" name="name" id="name" class="form-control"></br>
         <label>Email</label></br>
-        <input class="form-control" name="game_desc" id="game_desc">
+        <input class="form-control" name="email" id="email">
         <label>Password</label></br>
-        <input type="text" name="price" id="price" class="form-control"></br>
+        <input type="password" name="password" id="password" class="form-control"></br>
         <label>Role</label></br>
-        <input type="text" name="img_cover" id="img_cover" class="form-control"></br>
+        <select name="role" id="role" class="form-select">
+          <option value=0 >User</option>
+          <option value=1 >Admin</option>
+        </select></br>
         <input type="submit" value="Save" class="btn btn-success"></br>
     </form>
   

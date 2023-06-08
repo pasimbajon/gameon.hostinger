@@ -18,7 +18,7 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Library') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('products.list')" :active="request()->routeIs('wishlist')">
+                    <x-nav-link :href="route('wishlist.list')" :active="request()->routeIs('wishlist')">
                         {{ __('Wishlist') }}
                     </x-nav-link>
                     <a href="{{ route('cart.list') }}" class="flex items-center">
